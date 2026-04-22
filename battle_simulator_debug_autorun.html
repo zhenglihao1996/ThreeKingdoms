@@ -2114,7 +2114,7 @@ function assert(condition, text) {
  * Indicates whether filename is delivered via file protocol (as opposed to http/https)
  * @noinline
  */
-var isFileURI = (filename) => filename.startsWith('file://');
+var isFileURI = (filename) => typeof filename === 'string' && filename.startsWith('file://');
 
 // include: runtime_common.js
 // include: runtime_stack_check.js
